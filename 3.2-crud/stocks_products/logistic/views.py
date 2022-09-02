@@ -11,7 +11,6 @@ class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
     # при необходимости добавьте параметры фильтрации
     filter_backends = [SearchFilter]
-    # filterset_fields = ['title']
     search_fields = ['title', 'description']
 
 
