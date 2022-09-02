@@ -1,3 +1,5 @@
-django
-djangorestframework
+django~=4.1
+djangorestframework~=3.13.1
 psycopg2-binary
+
+django-filter~=22.1
