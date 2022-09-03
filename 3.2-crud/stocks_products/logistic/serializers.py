@@ -53,5 +53,9 @@ class StockSerializer(serializers.ModelSerializer):
 
         for position in positions:
             position['stock'] = stock
-            StockProduct.objects.update_or_create(**position)
+            StockProduct.objects.update_or_create(
+                product=position['product'],
+                stock=stock,
+                defaults={'price': position['price'], 'quantity': position['quantity']}
+            )
         return stock
